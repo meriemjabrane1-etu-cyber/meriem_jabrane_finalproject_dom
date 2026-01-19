@@ -3,27 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-   padding: 0px 50px;
-
-}
+ 
 /*& navpar  */
 .navbar {
   display: flex; 
   align-items: center; 
+  justify-content: center;
   padding: 15px 30px;
   background: white;
   border-bottom: 1px solid #ddd;
-  width: 100%;
+  width: 80%;
 }
 
 .logo {
-  font-size: 34px;
-  font-weight: bold;
+  font-size: 34px; 
   color: #0c0c0c; 
   font-family: "Special Gothic Condensed One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  padding-left: 50px;
 
 
 }
@@ -42,21 +40,99 @@ body{
   text-decoration: none;
   color: rgb(159, 153, 153);
   font-size: bold;
-}
-
-.btnNav{
-    border: none;
-    background-color: rgb(221, 7, 7);
-    border-radius: 35px;
-    padding:10px 20px;
-    color: aliceblue;
-}
+} 
 .menu-btn {
   display: none;
   font-size: 26px;
   cursor: pointer;
 }
+/*& section : 1 */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 30px;
+  background-color: #f8f9fa;
+}
+.hero-text {
+  max-width: 500px;
+}
 
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  .hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-book {
+  background-color: #ce1212;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn-video {
+  background: transparent;
+  border: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.hero-image img {
+  width: 400px;
+}
+}
+
+.hero-text p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-book {
+  background-color: #ce1212;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn-video {
+  background: transparent;
+  border: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 400px;
+}
 @media (max-width: 768px) {
  
   .nav-links {
