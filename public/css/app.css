@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   padding: 0px 50px;
+
+}
+/*& navpar  */
+.navbar {
+  display: flex; 
+  align-items: center; 
+  padding: 15px 30px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: bold;
+  color: #0c0c0c; 
+  font-family: "Special Gothic Condensed One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(159, 153, 153);
+  font-size: bold;
+}
+
+.btnNav{
+    border: none;
+    background-color: rgb(221, 7, 7);
+    border-radius: 35px;
+    padding:10px 20px;
+    color: aliceblue;
+}
+.menu-btn {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+ 
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd; 
+  }
+
+  .nav-links.show {
+    display: grid;
+    width: 90vw;
+    height: 70vh;
+    border-radius: 2%;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+  .nav_left{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+  }
+} 

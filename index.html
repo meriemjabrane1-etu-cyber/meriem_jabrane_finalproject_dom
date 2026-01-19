@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -15,21 +20,54 @@
 
     <!-- navpar -->
     <nav class="navbar">
-        <div class="logo">Yummy</div>
+        <div class="logo"><span>Yummy.</span></div>
 
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#menu">Menu</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#event">Event</a></li>
+            <li><a href="#chefs">Chefs</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                </button>
+                <ul class="dropdown-menu ">
+                    <li><a class="dropdown-item" href="#">dropdown 1</a></li>
+                    <li class="nav-item deepdrown">
+                        <button class="btn deepdrown-toggle" data-bs-toggle="deepdrown" aria-expanded="false">
+                            Deep Dropdown
+                        </button>
+                        <ul class="deepdrown-menu ">
+                    <li><a>Deep Dropdown 1</a></li>
+                    <li><a class="deepdrown-item" href="#">Deep Dropdown 2</a></li>
+                    <li><a class="deepdrown-item" href="#">Deep Dropdown 3</a></li>
+                    <li><a class="deepdrown-item" href="#">Deep Dropdown 4</a></li>
+                    <li><a class="deepdrown-item" href="#">Deep Dropdown 5</a></li>
+                    </li>
+                </ul>
+            
+            <li><a class="dropdown-item" href="#">dropdown 2</a></li>
+            <li><a class="dropdown-item" href="#">dropdown 3</a></li>
+            <li><a class="dropdown-item" href="#">dropdown 4</a></li>
+            </li>
         </ul>
+        <li><a href="#contact">Contact</a></li>
 
-        <!-- button -->
+        </ul>
+        <div class="nav_left">
+        <button class="btnNav">Book a Table</button>
+        <!-- button_mobile -->
         <div class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></div>
+        </div>
     </nav>
 
 
     <script src="./public/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
