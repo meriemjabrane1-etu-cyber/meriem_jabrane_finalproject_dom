@@ -86,29 +86,94 @@
             <img src="./public/images/Yummy/hero-img.png" class="top_img" alt="food">
         </div>
     </section>
-    <!-- about -->
-    <section>
-        <p>About Us</p>
-        <h1>Learn More <span>About Us</span></h1>
-        <div>
-            <img src="./public/images/Yummy/about.jpg" alt="">
-            <div>
-                <h1>Book a Table</h1>
-                <p>+1 5589 55488 55</p>
+    <!--~~ BOOKING MODAL -->
+    <div class="booking-modal" id="bookingModal">
+        <div class="booking-content">
+            <button id="closeBooking" class="close-booking">X</button>
+
+            <h2>Book a Table</h2>
+
+            <form id="bookingForm">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+
+                <select id="meal">
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                </select>
+
+                <label>Start Time:</label>
+                <input type="time" id="startTime" required>
+
+                <label>End Time:</label>
+                <input type="time" id="endTime" required>
+
+                <input type="number" id="people" placeholder="Number of People" min="1" required>
+
+                <button type="submit">Book Now</button>
+            </form>
+
+            <div id="bookingMessage"></div>
+        </div>
+    </div>
+
+    <!--~~ about -->
+    <section class="About">
+        <section class="AboutUs">
+            <div></div>
+            <p>About Us</p>
+            <h1>Learn More About Us</h1>
+            <div class="aboutFlix">
+            <div class="about_left">
+                <img src="./public/images/Yummy/about.jpg" class="aboutImag" alt="">
+                <div>
+                    <h1>Book a Table</h1>
+                    <p>+1 5589 55488 55</p>
+                </div>
             </div>
-        </div>
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
+            <div class="rightAbout">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <ul>
+                    <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    <li> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                    <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                </ul>
+                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident</p>
+                <img src="./public/images/Yummy/about-2.jpg" class="rightImg" alt="">    
+            </div>
+            </div>
+        </section>
+        <section class="learnMore">
+            <div class="divRoug">
+                <h1>Why Choose Yummy</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ipsum, minima molestiae assumenda alias nihil ipsa sint cumque laboriosam, veritatis fugit soluta perferendis! Nihil nesciunt vel, quos recusandae natus ipsum!</p>
+                <button>Learn More > </button>
+            </div>
+            <div>
+                <div>
+                    <i></i> 
+                    <h3>Corporis voluptates officia eiusmod</h3></div>
+                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
                 
+                <div>
+                    <i></i>
+                    <h3>Ullamco laboris ladore lore pan</h3>
+                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                </div>
+                <div>
+                    <i></i>
+                    <h3>Labore consequatur incidid dolore</h3>
+                     <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                </div>
+            </div>
+        </section>
+        <section class="">
 
-              <ul>
-                <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-              </ul>  
-        </div>
-
+        </section>
     </section>
     <script src="./public/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
