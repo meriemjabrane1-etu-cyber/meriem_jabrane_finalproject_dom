@@ -121,7 +121,7 @@
 }
 
 /*~~ BOOKING MODAL */
- /* button */
+/* button */
 .open-btn {
   padding: 12px 25px;
   background: #d60f0f;
@@ -184,8 +184,7 @@
 
 /* form */
 .modal-form {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: grid; 
   gap: 5px;
 }
 .modal-form textarea {
@@ -244,7 +243,7 @@
 }
 .rightImg{
   width: 35vw;
-  
+
 }
 .about_left > div{
   border: 4px solid #4c4b4b;
