@@ -62,13 +62,11 @@
   cursor: pointer;
 }
 
-.dropdown-menu,
-.deep-dropdown-menu {
+.dropdown-menu, .deep-dropdown-menu {
   display: none;
 }
 
-.dropdown-menu.show,
-.deep-dropdown-menu.show {
+.dropdown-menu.show, .deep-dropdown-menu.show {
   display: block;
   width: 300px;
 }
@@ -123,66 +121,103 @@
 }
 
 /*~~ BOOKING MODAL */
-.booking-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+ /* button */
+.open-btn {
+  padding: 12px 25px;
+  background: #d60f0f;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.booking-content {
+/* modal background */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; 
+}
+
+/* modal box */
+.modal-content {
   background: white;
-  padding: 20px 30px;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 10px;
+  width: 80%;
+  max-width: 1000px;
+  padding: 30px;
   position: relative;
 }
 
-.close-booking {
+/* close */
+.close {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
+  right: 20px;
+  top: 15px;
+  font-size: 30px;
   cursor: pointer;
 }
 
-#bookingForm input,
-#bookingForm select {
+/* title */
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.modal-content span {
+  color: red;
+}
+
+/* GRID */
+.modal-grid {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 30px;
+}
+
+/* image */
+.modal-img img {
   width: 100%;
-  margin: 10px 0;
-  padding: 8px;
-  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* form */
+.modal-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+.modal-form textarea {
+  grid-column: 1 / -1;
+  height: 120px;
+}
+
+.modal-form button {
+  grid-column: 1 / -1;
+  padding: 15px;
+  background: #d60f0f;
+  color: white;
+  border: none;
+  cursor: pointer; 
+}
+
+.modal-form input,
+.modal-form textarea {
+  padding: 10px;
   border: 1px solid #ccc;
 }
 
-#bookingForm button {
-  background-color: #ce1212;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 25px;
-  cursor: pointer;
-  margin-top: 10px;
-}
 
 /* & about */
 .AboutUs {
   margin: auto;
-  padding: 60px 50px;
-  background-color: #ce1212;
+  padding: 60px 50px; 
 }
 
 .aboutFlix {
   width: 100%;
-  height: 70%;
-  background-color: aquamarine;
+  height: 70%; 
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -190,17 +225,89 @@
 
 .aboutImag{
     width: 55vw;
+    padding-bottom: 7px;
 }
 .about_left{
-  background-color: blueviolet;
+  text-align: center;
+  gap: 3px;
+}
+.about_left .h2{
+  font-weight: bold;
+}
+.about_left > div > h1{
+  font-weight: bold;
+  color: #ce1212;
 }
 .rightAbout{
   display: grid;
   grid-template-columns: auto;
 }
 .rightImg{
-  width: 30vw;
+  width: 35vw;
+  
 }
+.about_left > div{
+  border: 4px solid #4c4b4b;
+}
+.rightAbout > .p1{
+  color: #9d9a9a;
+} 
+.rightAbout{
+  display: grid;
+  gap: 5px;
+  grid-template-rows: auto, auto, auto, auto;
+}
+.topAbout{
+  text-align: center;
+}
+.learnMore{
+   background-color: rgb(212, 226, 226);
+   width: 98vw;
+   height: 60vh;
+   display: grid;
+   grid-template-columns:1fr  60vw  ;
+   gap: 10px;
+   padding: 10px 50px;
+
+}
+.divRoug{
+  background-color: #ce1212;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.divRoug button{
+  background-color: rgba(255, 255, 255, 0.299);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 30px;
+}
+.cobin > div {
+  background-color: white;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+   justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+.divRoug .cobin {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.cobin {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+
 
 
 
@@ -264,8 +371,7 @@
     display: grid;
     width: 90%;
     height: 70vh;
-    border-radius: 2%;
-
+    border-radius: 2%; 
   }
 
   .show {
@@ -285,4 +391,19 @@
   .hero {
     flex-direction: column-reverse;
   }
+  .aboutFlix{
+    flex-direction: column;
+  }
+  .rightImg{
+    width: 100%;
+  }
+ .learnMore {
+  display: flex;
+  flex-direction: column;
+ }
+ .learnMore .cobin{
+  display: flex;
+  flex-direction: column;
+ }
+
 }

@@ -34,55 +34,20 @@ document.addEventListener("click", function (e) {
   }
 })
 // ~~ BOOKING MODAL
-let bookBtn = document.querySelector(".btnNav"); // Book a Table button
-let bookingModal = document.getElementById("bookingModal");
-let closeBooking = document.getElementById("closeBooking");
-let bookingForm = document.getElementById("bookingForm");
-let bookingMessage = document.getElementById("bookingMessage");
-let bookings = [];
+let openBtn = document.getElementById("openModal")
+let modal = document.getElementById("modal")
+let closeBtn = document.querySelector(".close")
 
-bookBtn.addEventListener("click", () => {
-  bookingModal.style.display = "flex";
-});
+openBtn.onclick = () => {
+  modal.style.display = "flex"
+}
 
-closeBooking.addEventListener("click", () => {
-  bookingModal.style.display = "none";
-});
+closeBtn.onclick = () => {
+  modal.style.display = "none"
+}
 
-bookingForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  let name = document.getElementById("fullName").value;
-  let meal = document.getElementById("meal").value;
-  let start = document.getElementById("startTime").value;
-  let end = document.getElementById("endTime").value;
-  let people = document.getElementById("people").value;
-
-
-  function timeToMinutes(t) {
-    let [h, m] = t.split(":");
-    return parseInt(h) * 60 + parseInt(m);
+window.onclick = (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none"
   }
-
-  let startMin = timeToMinutes(start);
-  let endMin = timeToMinutes(end);
-
-
-  let conflict = bookings.some(b => {
-    if (b.meal !== meal) return false;
-    let bStart = timeToMinutes(b.start);
-    let bEnd = timeToMinutes(b.end);
-    return (startMin < bEnd && endMin > bStart);
-  });
-
-  if (conflict) {
-    bookingMessage.textContent = "Time slot already booked!";
-    bookingMessage.style.color = "red";
-  } else {
-    bookings.push({name, meal, start, end, people});
-    bookingMessage.textContent = "Booking confirmed!";
-    bookingMessage.style.color = "green";
-    bookingForm.reset();
-  }
-});
-
+}

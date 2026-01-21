@@ -87,52 +87,59 @@
         </div>
     </section>
     <!--~~ BOOKING MODAL -->
-    <div class="booking-modal" id="bookingModal">
-        <div class="booking-content">
-            <button id="closeBooking" class="close-booking">X</button>
+    <!-- Button -->
+<button id="openModal" class="open-btn">Book a Table</button>
 
-            <h2>Book a Table</h2>
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
 
-            <form id="bookingForm">
-                <input type="text" id="fullName" placeholder="Full Name" required>
+    <span class="close">&times;</span>
 
-                <select id="meal">
-                    <option value="Breakfast">Breakfast</option>
-                    <option value="Lunch">Lunch</option>
-                    <option value="Dinner">Dinner</option>
-                </select>
+    <h2>BOOK YOUR <span>STAY WITH US</span></h2>
 
-                <label>Start Time:</label>
-                <input type="time" id="startTime" required>
+    <div class="modal-grid">
 
-                <label>End Time:</label>
-                <input type="time" id="endTime" required>
+      <!-- Left image -->
+      <div class="modal-img">
+        <img src="./public/images/Yummy/reservation.jpg" alt="">
+      </div>
 
-                <input type="number" id="people" placeholder="Number of People" min="1" required>
+      <!-- Right form -->
+      <form class="modal-form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <input type="tel" placeholder="Your Phone">
 
-                <button type="submit">Book Now</button>
-            </form>
+        <input type="date">
+        <input type="time">
+        <input type="number" placeholder="# of people">
 
-            <div id="bookingMessage"></div>
-        </div>
+        <textarea placeholder="Message"></textarea>
+
+        <button type="submit">Book a Table</button>
+      </form>
+ 
     </div>
-
+  </div>
+</div>  
     <!--~~ about -->
     <section class="About">
         <section class="AboutUs">
-            <div></div>
+            <div class="topAbout">
             <p>About Us</p>
             <h1>Learn More About Us</h1>
+        </div>
             <div class="aboutFlix">
             <div class="about_left">
                 <img src="./public/images/Yummy/about.jpg" class="aboutImag" alt="">
-                <div>
-                    <h1>Book a Table</h1>
-                    <p>+1 5589 55488 55</p>
+                <div >
+                    <h2>Book a Table</h2>
+                    <h1>+1 5589 55488 55</h1>
                 </div>
             </div>
             <div class="rightAbout">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                <p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua.</p>
                 <ul>
                     <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
@@ -153,12 +160,12 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ipsum, minima molestiae assumenda alias nihil ipsa sint cumque laboriosam, veritatis fugit soluta perferendis! Nihil nesciunt vel, quos recusandae natus ipsum!</p>
                 <button>Learn More > </button>
             </div>
-            <div>
+            <div class="cobin">
                 <div>
                     <i></i> 
-                    <h3>Corporis voluptates officia eiusmod</h3></div>
+                    <h3>Corporis voluptates officia eiusmod</h3>
                     <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                
+                </div>
                 <div>
                     <i></i>
                     <h3>Ullamco laboris ladore lore pan</h3>
