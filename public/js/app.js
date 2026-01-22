@@ -123,6 +123,81 @@ counters.forEach(counter => {
     }
   }, 20)
 })
+// & carouselodal
+let containers = document.querySelectorAll(".carousel-container");
+
+    containers.forEach(container => {
+
+        let carousel = container.querySelector(".carousel")
+        let slides = container.querySelectorAll(".slide")
+        let index = 0
+
+        let indicatorsGrp = document.createElement("div")
+        indicatorsGrp.className = "indicators-grp"
+        container.appendChild(indicatorsGrp)
+
+        slides.forEach((slide, i) => {
+            let indicator = document.createElement("div")
+            indicator.className = "indicator"
+            if (i === 0) indicator.classList.add("activeIndicator")
+            indicatorsGrp.appendChild(indicator)
+
+            indicator.addEventListener("click", () => {
+                goToSlide(i)
+            })
+        })
+
+        let indicators = indicatorsGrp.querySelectorAll(".indicator")
+
+        function goToSlide(i) {
+            carousel.style.transform = `translateX(-${i * 100}%)`
+
+            indicators.forEach(ind => ind.classList.remove("activeIndicator"))
+            indicators[i].classList.add("activeIndicator")
+
+            index = i
+        }
+        setInterval(() => {
+            index++;
+            if (index >= slides.length) index = 0
+            goToSlide(index)
+        }, 3000)
+    })
+// & modal logec carousel
+let images = document.querySelectorAll(".carousel-img");
+let modals = document.getElementById("carouselModal");
+let modalImg = document.getElementById("carouselImage");
+let closeBtns = document.querySelector(".close");
+let nextBtn = document.querySelector(".next");
+let prevBtn = document.querySelector(".prev");
+
+let currentIndex = 0;
+
+images.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    currentIndex = index;
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+  });
+});
+
+
+closeBtns.onclick = () => modal.style.display = "none";
+
+nextBtn.onclick = () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  modalImg.src = images[currentIndex].src;
+};
+
+
+prevBtn.onclick = () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  modalImg.src = images[currentIndex].src;
+};
+
+modals.onclick = (e) => {
+  if (e.target === modal) modal.style.display = "none";
+};
 
 
 
@@ -135,98 +210,3 @@ counters.forEach(counter => {
 
 
 
-
-// let menuBtn = document.getElementById("menuBtn")
-// let navLinks = document.getElementById("navLinks")
-
-// menuBtn.addEventListener("click", () => {
-//   navLinks.classList.toggle("show")
-// })
-
-// let dropdownBtn = document.getElementById("dropdownBtn")
-// let dropdownMenu = document.getElementById("dropdownMenu")
-
-// let deepBtn = document.getElementById("deepBtn")
-// let deepMenu = document.getElementById("deepMenu")
-
-// dropdownBtn.addEventListener("click", function (e) {
-//   e.preventDefault()
-
-//   dropdownMenu.classList.toggle("show")
-
-//   if (!dropdownMenu.classList.contains("show")) {
-//     deepMenu.classList.remove("show")
-//   }
-// })
-
-// deepBtn.addEventListener("click", function (e) {
-//   e.preventDefault()
-//   deepMenu.classList.toggle("show")
-// });
-
-// document.addEventListener("click", function (e) {
-//   if (!e.target.closest(".dropdown")) {
-//     dropdownMenu.classList.remove("show")
-//     deepMenu.classList.remove("show")
-//   }
-// })
-// // ~~ BOOKING MODAL
-//  let bookings = JSON.parse(localStorage.getItem("bookings")) || []
-
-// let modal = document.getElementById("modal")
-// let openBtn = document.getElementById("openModal")
-// let closeBtn = document.querySelector(".close")
-// let form = document.querySelector(".modal-form")
-
-// let dateInput = form.querySelector('input[type="date"]')
-// let timeInput = form.querySelector('input[type="time"]')
-// let peopleInput = form.querySelector('input[type="number"]')
-
-// openBtn.addEventListener("click", () => {
-//   modal.style.display = "flex"
-// })
-
-// closeBtn.addEventListener("click", () => {
-//   modal.style.display = "none"
-// })
-
-// function isOverlapping(newBooking) {
-//   for (let booking of bookings) {
-//     if (
-//       booking.date === newBooking.date &&
-//       booking.time === newBooking.time
-//     ) {
-//       return true
-//     }
-//   }
-//   return false
-// }
-
-// form.addEventListener("submit", function (e) {
-//   e.preventDefault()
-
-//   let date = dateInput.value
-//   let time = timeInput.value
-//   let people = peopleInput.value
-
-//   if (!date || !time || !people) {
-//     alert(" Fill all required fields")
-//     return
-//   }
-
-//   let newBooking = { date, time }
-
-//   if (isOverlapping(newBooking)) {
-//     alert(" This time is already booked")
-//     return
-//   }
-
-//   bookings.push(newBooking)
-//   localStorage.setItem("bookings", JSON.stringify(bookings))
-
-//   alert(" Booking successful")
-
-//   form.reset()
-//   modal.style.display = "none"
-// })
- 
